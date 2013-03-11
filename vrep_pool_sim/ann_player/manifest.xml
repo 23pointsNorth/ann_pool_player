@@ -1,0 +1,21 @@
+<package>
+  <description brief="ann_player">
+
+     ann_player
+
+  </description>
+  <author>daniel</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/ann_player</url>
+  <depend package="roscpp"/>
+  <depend package="image_transport"/>
+  <depend package="vrep_plugin"/>
+  <depend package="opencv2"/>
+  <depend package="sensor_msgs"/>
+  <depend package="geometry_msgs"/>
+  <depend package="cv_bridge"/>
+  
+</package>
+
+

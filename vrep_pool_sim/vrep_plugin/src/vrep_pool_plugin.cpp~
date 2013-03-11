@@ -1,0 +1,253 @@
+#include "vrep_plugin/vrep_pool_plugin.h"
+#include "v_repLib.h"
+#include <iostream>
+#include <string.h>
+#include "ros/ros.h"
+#include "image_transport/image_transport.h"
+#include "sensor_msgs/image_encodings.h"
+#include "vrep_plugin/Pool_table_state.h"
+#include "vrep_plugin/Turn.h"
+
+#define PLUGIN_VERSION 1
+
+LIBRARY vrepLib; // the V-REP library that we will dynamically load and bind
+
+ros::NodeHandle* node;
+ros::Subscriber sub;
+ros::Subscriber sim_change_sub;
+image_transport::ImageTransport* img_transport;
+image_transport::Publisher img_pub;
+ros::Publisher table_state_pub;
+ros::ServiceServer pool_table;
+vrep_plugin::Pool_table_state table_state;
+
+int cue_handle, white_ball_handle, balls_handle[15], camera_handle;
+float cue_position[3], cue_orientation[3]; //iniatls
+float pos[3];
+
+void update_velovities(float left, float right)
+{
+	//simSetJointTargetVelocity(left_joint_handle, left);
+	//simSetJointTargetVelocity(right_joint_handle, right);
+}
+/*
+void sim_change_callback(const line_tracer_plugin::Sim_status::ConstPtr& msg)
+{
+	//std::cout << "Changing Line Tracer Simulation!\n";
+	sim_change_status.restart = msg->restart;
+}*/
+
+bool evaluate_player_turn_callback(vrep_plugin::Turn::Request  &req, 
+								   vrep_plugin::Turn::Response &res)
+{
+	//update_velovities(msg->left, msg->right);
+	//execute the turn
+	ROS_INFO("I received a turn. Angle-%f, Power-%f", req.angle, req.power);
+	res.score = 0;
+	return true;
+}
+
+// This is the plugin start routine (called just once, just after the plugin was loaded):
+VREP_DLLEXPORT unsigned char v_repStart(void* reservedPointer,int reservedInt)
+{
+	// Dynamically load and bind V-REP functions:
+	// ******************************************
+	// 1. Figure out this plugin's directory:
+	char curDirAndFile[1024];
+
+	getcwd(curDirAndFile, sizeof(curDirAndFile));
+
+	std::string currentDirAndPath(curDirAndFile);
+	// 2. Append the V-REP library's name:
+	std::string temp(currentDirAndPath);
+
+	temp+="/libv_rep.so";
+	// 3. Load the V-REP library:
+	vrepLib=loadVrepLibrary(temp.c_str());
+	if (vrepLib==NULL)
+	{
+		std::cout << "Error, could not find or correctly load the V-REP library. Cannot start 'ROS' plugin.\n";
+		return(0); // Means error, V-REP will unload this plugin
+	}
+	if (getVrepProcAddresses(vrepLib)==0)
+	{
+		std::cout << "Error, could not find all required functions in the V-REP library. Cannot start 'ROS' plugin.\n";
+		unloadVrepLibrary(vrepLib);
+		return(0); // Means error, V-REP will unload this plugin
+	}
+	// ******************************************
+
+	// Check the version of V-REP:
+	// ******************************************
+	int vrepVer;
+	simGetIntegerParameter(sim_intparam_program_version,&vrepVer);
+	if (vrepVer<20604) // if V-REP version is smaller than 2.06.04
+	{
+		std::cout << "Sorry, your V-REP copy is somewhat old. Cannot start 'ROS' plugin.\n";
+		unloadVrepLibrary(vrepLib);
+		return(0); // Means error, V-REP will unload this plugin
+	}
+	// ******************************************
+
+	// Here you could handle various initializations
+	// Here you could also register custom Lua functions or custom Lua constants
+	//
+	// e.g. you could register following functions here:
+	// nodeHandle=simExtRosStart(...)
+	// simExtRosFinish(nodeHandle)
+	// simExtRosEnableService(nodeHandle,...)
+	// etc.
+
+	std::cout << "Initializing v-rep plugin...\n";
+	int argc = 0;
+	char** argv = NULL;
+	ros::init(argc,argv,"v_rep_pool_sim");
+
+	if (!ros::master::check())
+	{
+		std::cout << "Cannot detect ROS master!" << std::endl;
+		return 0;
+	}
+	std::cout << "Creating node...\n";
+	node = new ros::NodeHandle();
+	img_transport = new image_transport::ImageTransport(*node);
+	img_pub = img_transport->advertise("camera_image", 2);
+	table_state_pub = node->advertise<vrep_plugin::Pool_table_state>("pool_table_state", 1);
+  	
+	std::cout << "Subscribing...\n";
+	pool_table = node->advertiseService("player_turn", evaluate_player_turn_callback);
+	//sim_change_sub = node->subscribe("sim_change_status", 2, sim_change_callback);
+	
+	std::cout << "Initialized!\n";
+	return(PLUGIN_VERSION); // initialization went fine, we return the version number of this plugin (can be queried with simGetModuleName)
+}
+
+// This is the plugin end routine (called just once, when V-REP is ending, i.e. releasing this plugin):
+VREP_DLLEXPORT void v_repEnd()
+{
+	// Here you could handle various clean-up tasks
+	ros::shutdown();
+	unloadVrepLibrary(vrepLib); // release the library
+}
+
+// This is the plugin messaging routine (i.e. V-REP calls this function very often, with various messages):
+VREP_DLLEXPORT void* v_repMessage(int message,int* auxiliaryData,void* customData,int* replyData)
+{ // This is called quite often. Just watch out for messages/events you want to handle
+	// Keep following 5 lines at the beginning and unchanged:
+	simLockInterface(1);
+	int errorModeSaved;
+	simGetIntegerParameter(sim_intparam_error_report_mode,&errorModeSaved);
+	simSetIntegerParameter(sim_intparam_error_report_mode,sim_api_errormessage_ignore);
+	void* retVal=NULL;
+
+	// Here we can intercept many messages from V-REP (actually callbacks). Only the most important messages are listed here:
+
+	if (message==sim_message_eventcallback_instancepass)
+	{ // This message is sent each time the scene was rendered (well, shortly after) (very often)
+		// When a simulation is not running, but you still need to execute some commands, then put some code here
+	}
+
+	if (message==sim_message_eventcallback_mainscriptabouttobecalled)
+	{ // Main script is about to be run (only called while a simulation is running (and not paused!))
+		//
+		// This is a good location to execute commands (e.g. commands needed to generate ROS messages)
+		//
+		// e.g. to read all joint positions:
+		
+		ros::spinOnce();
+		
+		int size[2], data_len;
+		sensor_msgs::Image image_msg;
+
+		simLockInterface(1); 
+		
+		//
+		//Generate image message
+		//
+		float* image_buf = simGetVisionSensorImage(camera_handle);
+		simGetVisionSensorResolution(camera_handle, size);
+
+		image_msg.encoding = sensor_msgs::image_encodings::RGB8;
+		image_msg.height = size[1];
+		image_msg.width  = size[0];
+		image_msg.step   = image_msg.width * 3; //image stride in bytes
+
+		data_len = image_msg.step * image_msg.height;
+		image_msg.data.resize(data_len);
+		image_msg.is_bigendian = 0;
+
+		int msg_idx, buf_idx;
+		for(unsigned int i = 0; i < image_msg.height; i++)
+		{
+			for(unsigned int j = 0; j < image_msg.step; j++)
+			{
+				msg_idx = (image_msg.height - i - 1) * image_msg.step + j;
+				buf_idx = i * image_msg.step + j;
+				image_msg.data[msg_idx] = (unsigned char)(image_buf[buf_idx] * 255);
+			}
+		}
+		
+		simReleaseBuffer((char*)image_buf);
+
+		
+		//
+		//Get all ball positions
+		//
+		simGetObjectPosition(white_ball_handle, -1, pos);
+		table_state.white_ball.x = pos[0];
+		table_state.white_ball.y = pos[1];
+		table_state.white_ball.z = pos[2];
+		
+		for (int i=0; i < 15; i++)
+		{
+			simGetObjectPosition(balls_handle[i], -1, pos);
+			table_state.balls[i].x = pos[0];
+			table_state.balls[i].y = pos[1];
+			table_state.balls[i].z = pos[2];
+		}
+		//ROS_INFO("Read ball positions. White ball at x:%f y:%f z:%f", table_state.white_ball.x, table_state.white_ball.y, table_state.white_ball.z);
+		//simGetObjectOrientation(body_handle, -1, body_orientation);
+		
+		simLockInterface(0);
+		
+		//Publish messages
+		img_pub.publish(image_msg);
+		table_state_pub.publish(table_state);
+		// The best would be to start ROS activity when a simulation is running, and stop it when a simulation ended
+		// If you allow ROS activity while a simulation is not running, then it becomes a little bit tricky when a scene
+		// was switched for example (e.g. the clients would need a way to detect that)
+	}
+
+	if (message==sim_message_eventcallback_simulationabouttostart)
+	{ // Simulation is about to start
+		// Here you could launch the ROS node (if using just one node)
+		// If more than one node should be supported (e.g. with different services per node),
+		// then it is better to start a node via a custom Lua function
+		white_ball_handle = simGetObjectHandle("white_ball");
+		std::cout << "White ball handle: " << white_ball_handle << std::endl;
+
+		cue_handle = simGetObjectHandle("cue");
+		std::cout << "Cue handle: " << cue_handle << std::endl;
+		for (int i=0; i < 15; i++)
+		{
+			std::stringstream ball_name;
+			ball_name << "ball";
+			ball_name << i;
+			balls_handle[i] = simGetObjectHandle(ball_name.str().c_str()); 
+			std::cout << "Ball " << i << " handle: " << balls_handle[i] << std::endl;
+		}
+		camera_handle = simGetObjectHandle("camera_sensor");
+		std::cout << "Camera handle: " << camera_handle << std::endl;
+	}
+
+	if (message==sim_message_eventcallback_simulationended)
+	{ // Simulation just ended
+		// Here you could kill the ROS node(s) that are still active. There could also be a custom Lua function to kill a specific ROS node.
+	}
+
+	// Keep following unchanged:
+	simSetIntegerParameter(sim_intparam_error_report_mode,errorModeSaved); // restore previous settings
+	simLockInterface(0);
+	return(retVal);
+}
+

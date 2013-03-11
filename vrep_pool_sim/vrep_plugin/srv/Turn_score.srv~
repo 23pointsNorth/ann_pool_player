@@ -1,0 +1,3 @@
+vrep_plugin::Turn turn_data
+---
+int32 score

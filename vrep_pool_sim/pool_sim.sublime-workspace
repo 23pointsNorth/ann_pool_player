@@ -1,0 +1,1045 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"image",
+				"image_msg"
+			],
+			[
+				"genera",
+				"generate_image_message"
+			],
+			[
+				"turns",
+				"turns_played"
+			],
+			[
+				"whi",
+				"white_ball_potted"
+			],
+			[
+				"turn",
+				"turns_played"
+			],
+			[
+				"tu",
+				"turns_played"
+			],
+			[
+				"white",
+				"white_ball_potted"
+			],
+			[
+				"save",
+				"save_games"
+			],
+			[
+				"ANN",
+				"ANN_POOL_PLAYER"
+			],
+			[
+				"ball",
+				"balls_potted"
+			],
+			[
+				"balls",
+				"balls_potted"
+			],
+			[
+				"data",
+				"dataFile"
+			],
+			[
+				"ROS_",
+				"ROS_INFO"
+			],
+			[
+				"games",
+				"games_played"
+			],
+			[
+				"TABLE",
+				"TABLE_DIAG"
+			],
+			[
+				"TAB",
+				"TABLE_WIDTH"
+			],
+			[
+				"TAb",
+				"TABLE_WIDTH"
+			],
+			[
+				"TA",
+				"TABLE_HEIGHT"
+			],
+			[
+				"EX",
+				"EXPERTISE_SCORE"
+			],
+			[
+				"EXP",
+				"EXPERT_ON"
+			],
+			[
+				"tuns",
+				"turns_played"
+			],
+			[
+				"initia",
+				"initial_table_state"
+			],
+			[
+				"init",
+				"initial_table_state"
+			],
+			[
+				"_",
+				"_2PI"
+			],
+			[
+				"ba",
+				"balls_handle"
+			],
+			[
+				"Ba",
+				"BALL_COUNT"
+			],
+			[
+				"BAll",
+				"BALL_COUNT"
+			],
+			[
+				"Neura",
+				"NeuralNetwork"
+			],
+			[
+				"nn",
+				"nn_player"
+			],
+			[
+				"Table",
+				"TABLE_HEIGHT"
+			],
+			[
+				"Sta",
+				"STANDARD_DEVIATION"
+			],
+			[
+				"STA",
+				"STANDARD_MEAN"
+			],
+			[
+				"get",
+				"getNormalDistribution"
+			],
+			[
+				"RA",
+				"RAND_SAMPLE"
+			],
+			[
+				"rand",
+				"RAND_SAMPLE"
+			],
+			[
+				"y",
+				"y"
+			],
+			[
+				"Pla",
+				"PLAYER_NONE"
+			],
+			[
+				"Player",
+				"PLAYER_RAISE_CUE"
+			],
+			[
+				"PLA",
+				"PLAYER_CUE_DOWN"
+			],
+			[
+				"RED",
+				"RED_BALL_MOVEMENT"
+			],
+			[
+				"player",
+				"player_turn"
+			],
+			[
+				"PLAYER",
+				"PLAYER_NONE"
+			],
+			[
+				"PL",
+				"PLAYER_EXECUTE_SHOT"
+			],
+			[
+				"tip",
+				"tip_position"
+			],
+			[
+				"PLAY",
+				"PLAYER_RAISE_CUE"
+			],
+			[
+				"player_turn",
+				"player_turn_state"
+			],
+			[
+				"new",
+				"new_player_turn"
+			],
+			[
+				"RED_",
+				"RED_BALL_HIT"
+			],
+			[
+				"table",
+				"table_state"
+			],
+			[
+				"score",
+				"score"
+			],
+			[
+				"pool",
+				"POOL_TABLE_HEIGHT"
+			],
+			[
+				"turn_",
+				"turn_output"
+			],
+			[
+				"nn_",
+				"nn_output"
+			],
+			[
+				"ros",
+				"ROS_INFO"
+			],
+			[
+				"std",
+				"std_msgs"
+			],
+			[
+				"ROS",
+				"ROS_INFO"
+			],
+			[
+				"Image",
+				"ImageTransport"
+			],
+			[
+				"steady",
+				"steady_state"
+			],
+			[
+				"stead",
+				"steady_state"
+			],
+			[
+				"old",
+				"old_table_state"
+			],
+			[
+				"TIP",
+				"TIP_OFFSET_Y"
+			],
+			[
+				"V-re",
+				"V-REP"
+			],
+			[
+				"cue",
+				"cue_orientation"
+			],
+			[
+				"cue_",
+				"cue_handle"
+			],
+			[
+				"removed",
+				"removed_abs"
+			],
+			[
+				"remo",
+				"removed_morph"
+			],
+			[
+				"moveme",
+				"movement_contours"
+			],
+			[
+				"Moveme",
+				"movement_colour"
+			],
+			[
+				"bckg_",
+				"bckg_colour"
+			],
+			[
+				"Sa",
+				"SAVE_SNAPSHOTS_PATH"
+			],
+			[
+				"IMA",
+				"IMAGE_HEIGHT"
+			],
+			[
+				"Track",
+				"TrackBirds"
+			],
+			[
+				"GetOp",
+				"GetOptionsID"
+			],
+			[
+				"Get",
+				"GetOptionsID"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"v",
+				"vel"
+			],
+			[
+				"Conn",
+				"Connect"
+			],
+			[
+				"M",
+				"MySQLDatabase"
+			],
+			[
+				"stereo_",
+				"stereo_cam"
+			],
+			[
+				"Option",
+				"OptionsPath"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "vrep_plugin/src/vrep_pool_plugin.cpp",
+			"settings":
+			{
+				"buffer_size": 17086,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vrep_plugin/src/ann_player_results",
+			"settings":
+			{
+				"buffer_size": 11545753,
+				"line_ending": "Unix",
+				"name": "daniel@ubuntu:~$ rosrun ann_player ann_player"
+			}
+		},
+		{
+			"file": "ann_player/src/ann_player.cpp",
+			"settings":
+			{
+				"buffer_size": 10432,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ann_player/src/NeuralNetwork.cpp",
+			"settings":
+			{
+				"buffer_size": 12827,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/User/ROS.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"clean",
+				"Build: Clean"
+			],
+			[
+				"build",
+				"Build: Build"
+			],
+			[
+				"b",
+				"Build: Build"
+			],
+			[
+				"make",
+				"Set Syntax: Makefile"
+			],
+			[
+				"clea",
+				"Build: Clean"
+			],
+			[
+				"buil",
+				"Build: Clean"
+			],
+			[
+				"Syntax C++",
+				"Set Syntax: C++"
+			],
+			[
+				"Docu",
+				"Set Syntax: Rd (R Documentation)"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"Package",
+				"Package Control: Discover Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"keybin",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"INSTALL",
+				"Package Control: Install Package"
+			],
+			[
+				"snippet",
+				"Snippet: Vector For Loop"
+			],
+			[
+				"syntax C++",
+				"Set Syntax: C++"
+			],
+			[
+				"console",
+				"Set Syntax: R Console"
+			]
+		],
+		"width": 404.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/daniel/fuerte_workspace/sandbox/vrep_pool_sim/ann_player/src/NeuralNetwork.cpp",
+		"/opt/ros/fuerte/include/opencv2/core/core.hpp",
+		"/usr/include/c++/4.6/bits/c++0x_warning.h",
+		"/home/daniel/fuerte_workspace/sandbox/vrep_pool_sim/vrep_plugin/msg/Pool_table_state.msg",
+		"/home/daniel/fuerte_workspace/sandbox/vrep_pool_sim/ann_player/include/NeuralNetwork.h",
+		"/home/daniel/fuerte_workspace/sandbox/vrep_pool_sim/vrep_plugin/srv/Turn.srv",
+		"/home/daniel/fuerte_workspace/sandbox/vrep_pool_sim/pool_table/src/pool_table.cpp",
+		"/home/daniel/fuerte_workspace/sandbox/vrep_pool_sim/vrep_plugin/src/v_repLib.cpp",
+		"/home/daniel/fuerte_workspace/sandbox/vrep_pool_sim/ann_player/CMakeLists.txt~",
+		"/home/daniel/Projects/BirdTracking/BirdTrack/Makefile~",
+		"/home/daniel/Projects/BirdTracking/Tracker/include/MovementTracker.h",
+		"/home/daniel/Desktop/mlpmain.cpp",
+		"/home/daniel/Projects/BirdTracking/BirdTrack/src/BirdTrack.cpp",
+		"/home/daniel/Projects/BirdTracking/Tracker/src/Measurement3D.cpp",
+		"/home/daniel/Projects/BirdTracking/Tracker/src/StereoRecorder.cpp",
+		"/home/daniel/Projects/BirdTracking/CameraPair/src/CameraPair.cpp",
+		"/home/daniel/Projects/BirdTracking/Calibration/src/ImageDataAcquisition.cpp",
+		"/home/daniel/Projects/BirdTracking/Utilities/src/Utilities.cpp",
+		"/home/daniel/Projects/BirdTracking/Tracker/include/StereoRecorder.h",
+		"/home/daniel/Projects/BirdTracking/Tracker/src/StereoTracker.cpp",
+		"/home/daniel/Projects/BirdTracking/CameraPair/src/ImageReceiver.cpp",
+		"/home/daniel/Projects/BirdTracking/BirdTrack/src/MultiCamUtility.cpp",
+		"/home/daniel/Projects/BirdTracking/include/MovementTracker.h",
+		"/home/daniel/Projects/BirdTracking/MySQLDatabase/src/MySQLDatabase.cpp",
+		"/home/daniel/Projects/BirdTracking/CameraPair/include/CameraPair.h",
+		"/home/daniel/Projects/CameraPair/include/CameraPair.h",
+		"/home/daniel/Projects/BirdTracking/Tracker/src/MovementTracker.cpp",
+		"/home/daniel/Projects/BirdTracking/CameraPair/include/ImageReceiver.h",
+		"/home/daniel/Projects/BirdTracking/Utilities/include/Utilities.h",
+		"/home/daniel/Projects/BirdTracking/Tracker/src/ForegroundSegmentation.cpp",
+		"/home/daniel/Projects/BirdTracking/Tracker/include/ForegroundSegmentation.h",
+		"/home/daniel/Projects/BirdTracking/Tracker/include/StereoTracker.h",
+		"/home/daniel/Projects/BirdTracking/Options/src/Options.cpp",
+		"/home/daniel/Projects/BirdTracking/Options/include/Options.h",
+		"/home/svetlin/Projects/BirdTrackingV2/CameraPair/include/ImageReceiver.h",
+		"/home/svetlin/Projects/BirdTrackingV2/CameraPair/src/CameraPair.cpp",
+		"/home/svetlin/Projects/BirdTrackingV2/Tracker/src/ForegroundSegmentation.cpp",
+		"/home/svetlin/Projects/BirdTrackingV2/CameraPair/include/CameraPair.h",
+		"/home/svetlin/Projects/BirdTrackingV2/CameraPair/Makefile",
+		"/home/svetlin/Projects/BirdTrackingV2/Tracker/Makefile",
+		"/home/svetlin/Projects/BirdTrackingV2/Makefile",
+		"/home/svetlin/Projects/BirdTrackingV2/Options/Makefile",
+		"/home/svetlin/Projects/BirdTrackingV2/Tracker/src/Measurement3D.cpp",
+		"/home/svetlin/Projects/BirdTrackingV2/Tracker/src/MovementTracker.cpp",
+		"/home/svetlin/Projects/BirdTrackingV2/Tracker/src/StereoTracker.cpp",
+		"/home/svetlin/Projects/BirdTrackingV2/Tracker/include/Measurement3D.h",
+		"/home/svetlin/Projects/BirdTrackingV2/Tracker/include/MovementTracker.h",
+		"/home/svetlin/Projects/BirdTrackingV2/Tracker/include/ForegroundSegmentation.h",
+		"/home/svetlin/Projects/BirdTrackingV2/Make.sublime-build",
+		"/home/svetlin/Projects/BirdTrackingV2/BirdTracking.sublime-project",
+		"/home/svetlin/Projects/BirdTrackingV2/BirdTracking.sublime-workspace",
+		"/home/svetlin/Projects/Options/include/Options.h",
+		"/home/svetlin/Projects/BirdTrackingV2/Utilities/include/Utilities.h",
+		"/usr/include/mysql++/common.h",
+		"/home/svetlin/Projects/BirdTrackingV2/src/Measurement3D.cpp",
+		"/home/svetlin/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/svetlin/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+		"/home/svetlin/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/svetlin/Projects/BirdTrackingV2/Options/src/Options.cpp",
+		"/home/svetlin/Projects/BirdTrackingV2/src/Options.cpp",
+		"/home/svetlin/Projects/BirdTrackingV2/BirdTrack/src/MultiCamUtility.cpp",
+		"/home/svetlin/.config/sublime-text-2/Packages/SublimeClang/SublimeClang.sublime-settings",
+		"/home/svetlin/.config/sublime-text-2/Packages/Terminal/Default (Linux).sublime-keymap",
+		"/home/svetlin/.config/sublime-text-2/Packages/User/Terminal.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/home/svetlin/Projects/BirdTrackingV2/CameraPair",
+			"all"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"wait",
+			"Turns played: ",
+			"MIN_ERROR_LEARN",
+			"turns_played",
+			"std::cout",
+			"ROS_INFO",
+			"5f",
+			"pre_hit_table_state",
+			"player_turn_state",
+			"old_table_state",
+			"RED_BALL_POTTED",
+			"std::cout",
+			"TABLE_WIDTH",
+			"tip_position",
+			"player_turn",
+			"node",
+			"cue_position",
+			"cue_orientation",
+			"tip_pos",
+			"cue_position",
+			"cue",
+			"numtest",
+			"ApplyColourFilter",
+			"ssh",
+			"- 1000",
+			"pair_query",
+			"image_num",
+			"counter",
+			"stereo_cams",
+			"cam_id",
+			"id",
+			"MOVEMENT_DURATION",
+			"MOVEMENT_THERSHOLD",
+			"LAMBDA",
+			"IMAGE_BUFFER_SIZE",
+			"working",
+			"IMAGE_HEIGHT",
+			"IMAGE_WIDTH",
+			"COLOUR_DISTANCE",
+			"BIRD_BCKG_COLOUR_DISTANCE",
+			"IMAGE_HEIGHT",
+			"SMALLEST_BIRD",
+			"MAX_OBJECTS_PER_FRAME",
+			"LARGEST_BIRD",
+			"SMALLEST_BIRD",
+			"VERTICAL_MATCH_DISTANCE",
+			"Options",
+			"IMAGE_HEIGHT",
+			"IMAGE_BUFFER",
+			"#include MySQL++\nCFLAGS		+= -I /usr/include/mysql\n",
+			"IMAGE_WIDTH",
+			"IMAGE_HEIGHT"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "vrep_plugin/src/vrep_pool_plugin.cpp",
+					"settings":
+					{
+						"buffer_size": 17086,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12631,
+								12631
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6484.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "vrep_plugin/src/ann_player_results",
+					"settings":
+					{
+						"buffer_size": 11545753,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1969434,
+								1969434
+							]
+						],
+						"settings":
+						{
+							"auto_name": "daniel@ubuntu:~$ rosrun ann_player ann_player",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 641030.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "ann_player/src/ann_player.cpp",
+					"settings":
+					{
+						"buffer_size": 10432,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3892,
+								3892
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2080.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "ann_player/src/NeuralNetwork.cpp",
+					"settings":
+					{
+						"buffer_size": 12827,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								788,
+								788
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 195.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"ann",
+				"ann_player/src/NeuralNetwork.cpp"
+			],
+			[
+				"neural",
+				"ann_player/src/NeuralNetwork.cpp"
+			],
+			[
+				"ann_pl",
+				"ann_player/src/ann_player.cpp"
+			],
+			[
+				"mysq",
+				"MySQLDatabase/src/MySQLDatabase.cpp"
+			],
+			[
+				"image",
+				"CameraPair/include/ImageReceiver.h"
+			],
+			[
+				"measure",
+				"Tracker/src/Measurement3D.cpp"
+			],
+			[
+				"bi",
+				"BirdTrack/src/BirdTrack.cpp"
+			],
+			[
+				"stere",
+				"Tracker/src/StereoTracker.cpp"
+			],
+			[
+				"mea",
+				"Tracker/src/Measurement3D.cpp"
+			],
+			[
+				"imager",
+				"CameraPair/src/ImageReceiver.cpp"
+			],
+			[
+				"mease",
+				"Tracker/src/Measurement3D.cpp"
+			],
+			[
+				"stereo",
+				"Tracker/include/StereoRecorder.h"
+			],
+			[
+				"utilit",
+				"Utilities/src/Utilities.cpp"
+			],
+			[
+				"bird",
+				"BirdTrack/src/BirdTrack.cpp"
+			],
+			[
+				"mul",
+				"BirdTrack/src/MultiCamUtility.cpp"
+			],
+			[
+				"mo",
+				"Tracker/include/MovementTracker.h"
+			],
+			[
+				"moveme",
+				"Tracker/src/MovementTracker.cpp"
+			],
+			[
+				"camera",
+				"CameraPair/include/CameraPair.h"
+			],
+			[
+				"came",
+				"CameraPair/include/CameraPair.h"
+			],
+			[
+				"movemen",
+				"Tracker/src/MovementTracker.cpp"
+			],
+			[
+				"uti",
+				"Utilities/include/Utilities.h"
+			],
+			[
+				"uril",
+				"Utilities/src/Utilities.cpp"
+			],
+			[
+				"ste",
+				"Tracker/include/StereoTracker.h"
+			],
+			[
+				"steret",
+				"Tracker/src/StereoTracker.cpp"
+			],
+			[
+				"ca",
+				"CameraPair/include/CameraPair.h"
+			],
+			[
+				"cam",
+				"CameraPair/include/CameraPair.h"
+			],
+			[
+				"stereor",
+				"Tracker/src/StereoRecorder.cpp"
+			],
+			[
+				"foreh",
+				"Tracker/include/ForegroundSegmentation.h"
+			],
+			[
+				"forecpp",
+				"Tracker/src/ForegroundSegmentation.cpp"
+			],
+			[
+				"optioncpp",
+				"Options/src/Options.cpp"
+			],
+			[
+				"mocpp",
+				"Tracker/src/MovementTracker.cpp"
+			],
+			[
+				"move",
+				"Tracker/include/MovementTracker.h"
+			],
+			[
+				"trackeh",
+				"Tracker/include/StereoTracker.h"
+			],
+			[
+				"tracker.cpp",
+				"Tracker/src/StereoTracker.cpp"
+			],
+			[
+				"opt",
+				"Options/include/Options.h"
+			],
+			[
+				"camerap",
+				"CameraPair/include/CameraPair.h"
+			],
+			[
+				"mysqcpp",
+				"MySQLDatabase/src/MySQLDatabase.cpp"
+			],
+			[
+				"mysqlcp",
+				"MySQLDatabase/src/MySQLDatabase.cpp"
+			],
+			[
+				"my",
+				"MySQLDatabase/src/MySQLDatabase.cpp"
+			],
+			[
+				"mysqlh",
+				"MySQLDatabase/include/MySQLDatabase.h"
+			],
+			[
+				"optiocpp",
+				"Options/src/Options.cpp"
+			],
+			[
+				"option",
+				"Options/include/Options.h"
+			],
+			[
+				"",
+				"CameraPair/src/CameraPair.cpp"
+			],
+			[
+				"camerapair.cp",
+				"CameraPair/src/CameraPair.cpp"
+			],
+			[
+				".h",
+				"CameraPair/include/ImageReceiver.h"
+			],
+			[
+				"make",
+				"Makefile"
+			],
+			[
+				"trackermake",
+				"Tracker/Makefile"
+			],
+			[
+				"optionmake",
+				"Options/Makefile"
+			],
+			[
+				"camerapairmake",
+				"CameraPair/Makefile"
+			],
+			[
+				"camera.h",
+				"CameraPair/include/CameraPair.h"
+			],
+			[
+				"sublime",
+				"BirdTracking.sublime-workspace"
+			],
+			[
+				"options.cpp",
+				"Options/src/Options.cpp"
+			],
+			[
+				"fore",
+				"Tracker/include/ForegroundSegmentation.h"
+			],
+			[
+				"move.h",
+				"Tracker/include/MovementTracker.h"
+			],
+			[
+				"camerap.h",
+				"CameraPair/include/CameraPair.h"
+			],
+			[
+				"imagerece.h",
+				"CameraPair/include/ImageReceiver.h"
+			],
+			[
+				"utu",
+				"Utilities/include/Utilities.h"
+			],
+			[
+				"options",
+				"Options/include/Options.h"
+			],
+			[
+				"meascpp",
+				"Tracker/src/Measurement3D.cpp"
+			],
+			[
+				"optionsmake",
+				"Options/Makefile"
+			],
+			[
+				"optio.h",
+				"Options/include/Options.h"
+			],
+			[
+				"tramake",
+				"Tracker/Makefile"
+			],
+			[
+				"meash",
+				"Tracker/include/Measurement3D.h"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 181.0,
+	"status_bar_visible": true
+}
